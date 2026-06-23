@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <title>Photo Map</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 <style>
 body {
@@ -17,15 +18,15 @@ body {
 }
 
 .popup-img {
-  width: 550px;
+  width: 320px;
   max-width: 100%;
   border-radius: 8px;
+  cursor: pointer;
   margin-top: 8px;
 }
 
-.popup-button {
-  margin: 5px;
-  padding: 5px 10px;
+.hidden-gallery {
+  display: none;
 }
 </style>
 </head>
@@ -35,6 +36,7 @@ body {
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
 const map = L.map('map').setView([54, -2], 5);
@@ -45,7 +47,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-// ===== LOCATIONS AND PHOTOS =====
+// ===== LOCATIONS =====
 
 const places = [
   {
@@ -54,7 +56,8 @@ const places = [
     text: "York Minster and old city centre.",
     photos: [
       "photos/york.jpg",
-      "photos/york2.jpg"
+      "photos/york2.jpg",
+      "photos/york3.jpg"
     ]
   },
 
@@ -83,69 +86,52 @@ const places = [
 // ===== CREATE MARKERS =====
 
 places.forEach((place, index) => {
-  const firstPhoto = place.photos[0];
+
+  const galleryName = `gallery-${index}`;
+
+  let galleryLinks = "";
+
+  place.photos.forEach((photo, photoIndex) => {
+    galleryLinks += `
+      <a href="${photo}"
+         class="glightbox ${photoIndex === 0 ? "" : "hidden-gallery"}"
+         data-gallery="${galleryName}"
+         data-title="${place.name}"
+         data-description="${place.text}">
+        ${photoIndex === 0
+          ? `<img src="${photo}" class="popup-img">`
+          : ""}
+      </a>
+    `;
+  });
 
   const popupContent = `
     <b>${place.name}</b><br>
     ${place.text}<br>
-
-    <img id="slide-${index}" 
-         src="${firstPhoto}" 
-         class="popup-img"><br>
-
-    <button class="popup-button" onclick="prevPhoto(${index})">◀</button>
-    <button class="popup-button" onclick="nextPhoto(${index})">▶</button>
-
-    <br>
-    <small>
-      <span id="counter-${index}">1</span> / ${place.photos.length}
-    </small>
+    ${galleryLinks}
+    <br><small>Click photo to open gallery</small>
   `;
 
   L.marker(place.coords)
     .addTo(map)
     .bindPopup(popupContent, {
-      maxWidth: 420
+      maxWidth: 380
     });
 });
 
 
-// ===== SLIDESHOW FUNCTIONS =====
+// ===== LIGHTBOX =====
 
-const photoIndexes = {};
-
-places.forEach((place, index) => {
-  photoIndexes[index] = 0;
+let lightbox = GLightbox({
+  selector: ".glightbox",
+  touchNavigation: true,
+  loop: true,
+  zoomable: true
 });
 
-function nextPhoto(placeIndex) {
-  const place = places[placeIndex];
-
-  photoIndexes[placeIndex] =
-    (photoIndexes[placeIndex] + 1) % place.photos.length;
-
-  updatePhoto(placeIndex);
-}
-
-function prevPhoto(placeIndex) {
-  const place = places[placeIndex];
-
-  photoIndexes[placeIndex] =
-    (photoIndexes[placeIndex] - 1 + place.photos.length) % place.photos.length;
-
-  updatePhoto(placeIndex);
-}
-
-function updatePhoto(placeIndex) {
-  const place = places[placeIndex];
-  const photoIndex = photoIndexes[placeIndex];
-
-  document.getElementById(`slide-${placeIndex}`).src =
-    place.photos[photoIndex];
-
-  document.getElementById(`counter-${placeIndex}`).textContent =
-    photoIndex + 1;
-}
+map.on("popupopen", function() {
+  lightbox.reload();
+});
 </script>
 
 </body>
