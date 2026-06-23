@@ -7,11 +7,25 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
 <style>
-#map{
-height:100vh;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-body{
-margin:0;
+
+#map {
+  height: 100vh;
+}
+
+.popup-img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.popup-button {
+  margin: 5px;
+  padding: 5px 10px;
 }
 </style>
 </head>
@@ -23,23 +37,115 @@ margin:0;
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
+const map = L.map('map').setView([54, -2], 5);
 
-var map = L.map('map').setView([54,-2],5);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap'
+}).addTo(map);
 
-L.tileLayer(
-'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-{
-maxZoom:19
+
+// ===== LOCATIONS AND PHOTOS =====
+
+const places = [
+  {
+    name: "York Minster",
+    coords: [53.96195, -1.08197],
+    text: "York Minster and old city centre.",
+    photos: [
+      "photos/york.jpg",
+      "photos/york2.jpg"
+    ]
+  },
+
+  {
+    name: "Clifford's Tower",
+    coords: [53.95561, -1.08017],
+    text: "Remains of the Norman castle in York.",
+    photos: [
+      "photos/clifford1.jpg",
+      "photos/clifford2.jpg"
+    ]
+  },
+
+  {
+    name: "The Shambles",
+    coords: [53.95759, -1.08025],
+    text: "Medieval street in York.",
+    photos: [
+      "photos/shambles1.jpg",
+      "photos/shambles2.jpg"
+    ]
+  }
+];
+
+
+// ===== CREATE MARKERS =====
+
+places.forEach((place, index) => {
+  const firstPhoto = place.photos[0];
+
+  const popupContent = `
+    <b>${place.name}</b><br>
+    ${place.text}<br>
+
+    <img id="slide-${index}" 
+         src="${firstPhoto}" 
+         class="popup-img"><br>
+
+    <button class="popup-button" onclick="prevPhoto(${index})">◀</button>
+    <button class="popup-button" onclick="nextPhoto(${index})">▶</button>
+
+    <br>
+    <small>
+      <span id="counter-${index}">1</span> / ${place.photos.length}
+    </small>
+  `;
+
+  L.marker(place.coords)
+    .addTo(map)
+    .bindPopup(popupContent, {
+      maxWidth: 420
+    });
+});
+
+
+// ===== SLIDESHOW FUNCTIONS =====
+
+const photoIndexes = {};
+
+places.forEach((place, index) => {
+  photoIndexes[index] = 0;
+});
+
+function nextPhoto(placeIndex) {
+  const place = places[placeIndex];
+
+  photoIndexes[placeIndex] =
+    (photoIndexes[placeIndex] + 1) % place.photos.length;
+
+  updatePhoto(placeIndex);
 }
-).addTo(map);
 
-L.marker([53.959,-1.081])
-.addTo(map)
-.bindPopup(`
-<b>York</b><br>
-Roman, Viking and medieval city.<br>
-<img src="photos/york.jpg" style="width:250px;">
-`);
+function prevPhoto(placeIndex) {
+  const place = places[placeIndex];
+
+  photoIndexes[placeIndex] =
+    (photoIndexes[placeIndex] - 1 + place.photos.length) % place.photos.length;
+
+  updatePhoto(placeIndex);
+}
+
+function updatePhoto(placeIndex) {
+  const place = places[placeIndex];
+  const photoIndex = photoIndexes[placeIndex];
+
+  document.getElementById(`slide-${placeIndex}`).src =
+    place.photos[photoIndex];
+
+  document.getElementById(`counter-${placeIndex}`).textContent =
+    photoIndex + 1;
+}
 </script>
 
 </body>
