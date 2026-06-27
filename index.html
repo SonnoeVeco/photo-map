@@ -29,6 +29,11 @@ body {
   padding: 6px 14px;
   margin: 6px;
 }
+
+.popup-title {
+  font-size: 18px;
+  font-weight: bold;
+}
 </style>
 </head>
 
@@ -46,231 +51,43 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+
+// ===== LOCATIONS =====
+
 const places = [
-  {
-    name: "York Minster",
-    coords: [53.96195, -1.08197],
-    text: "an Anglican cathedral, constructed between 1220 and 1472",
-    photos: [
-      "photos/minster-1.jpg",
-      "photos/minster-2.jpg",
-      "photos/minster-3.jpg",
-      "photos/minster-4.jpg",
-      "photos/minster-5.jpg",
-      "photos/minster-6.jpg",
-      "photos/minster-7.jpg",
-      "photos/minster-8.jpg",
-      "photos/minster-9.jpg",
-      "photos/minster-10.jpg",
-      "photos/minster-11.jpg"
-    ]
-  },
-    {
-    name: "Clifford's Tower",
-    coords: [53.95561, -1.08017],
-    text: "Remains of the Norman castle in York",
-    photos: [
-      "photos/clifford-1.jpg",
-      "photos/clifford-2.jpg",
-      "photos/clifford-3.jpg",
-      "photos/clifford-4.jpg"
-    ]
-  },
-   {
-    name: "Tenby",
-    coords: [51.672573, -4.695816],
-    text: "a picturesque 12th-century seaside town",
-    photos: [
-      "photos/tenby-1.jpg",
-      "photos/tenby-2.jpg",
-      "photos/tenby-3.jpg",
-      "photos/tenby-4.jpg",
-      "photos/tenby-5.jpg",
-      "photos/tenby-6.jpg",
-      "photos/tenby-7.jpg",
-      "photos/tenby-8.jpg",
-      "photos/tenby-9.jpg",
-      "photos/tenby-10.jpg"
-    ]
-  },
-   {
-    name: "Caerphilly Castle",
-  coords: [51.5761, -3.2204],
-  text: "One of Britain's largest medieval castles, built in the 13th century and renowned for its vast water defences, dramatic moat, and iconic leaning tower",
-    photos: [
-      "photos/caerfilly-1.jpg",
-      "photos/caerfilly-2.jpg",
-      "photos/caerfilly-3.jpg",
-      "photos/caerfilly-4.jpg",
-      "photos/caerfilly-5.jpg",
-      "photos/caerfilly-6.jpg"
-    ]
-  },
-  {
-  name: "Flint Castle",
-  coords: [53.2509, -3.1322],
-  text: "The first castle built by Edward I during his conquest of Wales in 1277. Overlooking the Dee Estuary, its impressive ruins played a key role in Welsh and English history, including the capture of Richard II.",
-  photos: [
-    "photos/flint-1.jpg",
-    "photos/flint-2.jpg",
-    "photos/flint-3.jpg",
-    "photos/flint-4.jpg",
-    "photos/flint-5.jpg",
-    "photos/flint-6.jpg",
-    "photos/flint-7.jpg",
-    "photos/flint-8.jpg",
-    "photos/flint-9.jpg",
-    "photos/flint-10.jpg"
-  ]
-},
-  {
-  name: "Gwrych Castle",
-  coords: [53.283262, -3.608089],
-  text: "A striking 19th-century Gothic Revival castle overlooking the Irish Sea",
-  photos: [
-    "photos/gwrych-1.jpg",
-    "photos/gwrych-2.jpg",
-    "photos/gwrych-3.jpg",
-    "photos/gwrych-3.jpg"
-  ]
-},
-  {
-  name: "Llangollen",
-  coords: [52.9692, -3.1718],
-  text: "A picturesque market town nestled in the Dee Valley, renowned for its medieval bridge, the UNESCO-listed Pontcysyllte Aqueduct, the Llangollen Railway, and the scenic ruins of Castell Dinas Brân overlooking the town",
-  photos: [
-    "photos/llangollen-1.jpg",
-    "photos/llangollen-2.jpg",
-    "photos/llangollen-3.jpg",
-    "photos/llangollen-4.jpg",
-    "photos/llangollen-5.jpg",
-    "photos/llangollen-6.jpg",
-    "photos/llangollen-7.jpg",
-    "photos/llangollen-8.jpg",
-    "photos/llangollen-9.jpg"
-  ]
-},
-  {
-  name: "Snowdon (Yr Wyddfa), Eryri National Park",
-  coords: [53.0685, -4.0761],
-  text: "Snowdon (Yr Wyddfa), rising to 1,085 m, is the highest mountain in Wales and the iconic peak of Eryri (Snowdonia) National Park. Renowned for its dramatic mountain scenery, glacial lakes, waterfalls, and diverse wildlife, the park is one of Britain's premier destinations for hiking, landscape photography, and outdoor adventures.",
-  photos: [
-    "photos/snowdon-01.jpg",
-    "photos/snowdon-02.jpg",
-    "photos/snowdon-03.jpg",
-    "photos/snowdon-04.jpg",
-    "photos/snowdon-05.jpg",
-    "photos/snowdon-06.jpg",
-    "photos/snowdon-07.jpg"
-  ]
-},
-  {
-  name: "Beeston Castle",
-  coords: [53.1298, -2.6892],
-  text: "Perched high on a rocky crag overlooking the Cheshire Plain, Beeston Castle is a dramatic 13th-century royal fortress built by Ranulf de Blondeville, Earl of Chester. Although now in ruins, it offers spectacular panoramic views extending across Cheshire to the Welsh mountains on clear days and is steeped in legends, including tales of Richard II's royal treasure.",
-  photos: [
-    "photos/beeston-castle-01.jpg",
-    "photos/beeston-castle-02.jpg",
-    "photos/beeston-castle-03.jpg"
-  ]
-},
-  {
-  name: "Stokesay Castle",
-  coords: [52.4187, -2.8345],
-  text: "One of England's finest and best-preserved fortified manor houses, Stokesay Castle was built in the late 13th century by wealthy wool merchant Laurence of Ludlow. Combining the comfort of a medieval manor with defensive features, it is renowned for its magnificent timber-framed gatehouse, Great Hall, and picturesque setting in the Shropshire countryside.",
-  photos: [
-    "photos/stokesay-castle-01.jpg",
-    "photos/stokesay-castle-02.jpg",
-    "photos/stokesay-castle-03.jpg",
-    "photos/stokesay-castle-04.jpg",
-    "photos/stokesay-castle-05.jpg"
-  ]
-},
-  {
+
+{
   name: "Ludlow Castle",
   coords: [52.3662, -2.7188],
-  text: "Overlooking the River Teme, Ludlow Castle is one of England's most important Norman fortresses. Founded in the late 11th century, it became the seat of the powerful Marcher Lords and later the administrative centre of the Council of Wales and the Marches. Its impressive ruins dominate the historic market town of Ludlow.",
-  photos: [
-    "photos/ludlow-castle-01.jpg",
-    "photos/ludlow-castle-02.jpg",
-    "photos/ludlow-castle-03.jpg",
-    "photos/ludlow-castle-04.jpg",
-    "photos/ludlow-castle-05.jpg",
-    "photos/ludlow-castle-06.jpg",
-    "photos/ludlow-castle-07.jpg",
-    "photos/ludlow-castle-08.jpg"
-    ]
+  text: "Overlooking the River Teme, Ludlow Castle is one of England's most important Norman fortresses. Its impressive ruins dominate the historic market town of Ludlow.",
+  base: "ludlow-castle",
+  count: 8
 },
-  {
-  name: "Valle Crucis Abbey",
-  coords: [52.9785, -3.1845],
-  text: "Nestled in the Dee Valley beneath the ruins of Castell Dinas Brân, Valle Crucis Abbey is one of Wales' best-preserved Cistercian monasteries. Founded in 1201 by Madog ap Gruffydd Maelor, it remains a remarkably peaceful medieval site, renowned for its elegant Gothic architecture and picturesque setting.",
-  photos: [
-    "photos/valle-crucis-abbey-01.jpg",
-    "photos/valle-crucis-abbey-02.jpg",
-    "photos/valle-crucis-abbey-03.jpg",
-    "photos/valle-crucis-abbey-04.jpg"
-  ]
-},
-  {
-  name: "Pontcysyllte Aqueduct",
-  coords: [52.9708, -3.0878],
-  text: "Completed in 1805 by engineers Thomas Telford and William Jessop, the Pontcysyllte Aqueduct is the tallest and longest navigable aqueduct in Britain. A UNESCO World Heritage Site, it carries the Llangollen Canal 38 metres above the River Dee, offering spectacular views across the surrounding valley.",
-  photos: [
-    "photos/pontcysyllte-aqueduct-01.jpg",
-    "photos/pontcysyllte-aqueduct-02.jpg",
-    "photos/pontcysyllte-aqueduct-03.jpg",
-    "photos/pontcysyllte-aqueduct-04.jpg",
-    "photos/pontcysyllte-aqueduct-05.jpg"
-  ]
-},
-  {
-  name: "Tantallon Castle",
-  coords: [56.056661, -2.650164],
-  text: "Perched dramatically on the cliffs overlooking the North Sea, Tantallon Castle is a magnificent mid-14th-century fortress built by William Douglas, 1st Earl of Douglas. Renowned for its spectacular coastal setting and massive curtain wall, it was one of Scotland's last great medieval castles and offers breathtaking views of Bass Rock and the Firth of Forth.",
-  photos: [
-    "photos/tantallon-castle-01.jpg",
-    "photos/tantallon-castle-02.jpg",
-    "photos/tantallon-castle-03.jpg",
-    "photos/tantallon-castle-04.jpg",
-    "photos/tantallon-castle-05.jpg",
-    "photos/tantallon-castle-06.jpg",
-    "photos/tantallon-castle-07.jpg"
-  ]
-},
-  {
-  name: "Edinburgh Castle",
-  coords: [55.9486, -3.1999],
-  text: "Dominating the Edinburgh skyline from the summit of Castle Rock, Edinburgh Castle is Scotland's most iconic fortress. With a history spanning over 1,000 years, it has served as a royal residence, military stronghold, and prison. Today it houses the Honours of Scotland (the Scottish Crown Jewels), the Stone of Destiny, and offers spectacular panoramic views over the city.",
-  photos: [
-    "photos/edinburgh-castle-01.jpg"
-  ]
-},
-  {
-  name: "Calton Hill",
-  coords: [55.9559, -3.1825],
-  text: "One of Edinburgh's most famous viewpoints, Calton Hill is home to a remarkable collection of neoclassical monuments, including the National Monument, Nelson Monument, and Dugald Stewart Monument. A UNESCO World Heritage Site, it offers breathtaking panoramic views of Edinburgh's Old and New Towns, Edinburgh Castle, Arthur's Seat, and the Firth of Forth.",
-  photos: [
-    "photos/calton-hill-01.jpg"
-  ]
-},
-  {
-  name: "Arthur's Seat",
-  coords: [55.9445, -3.1619],
-  text: "Arthur's Seat is an ancient extinct volcano rising 251 metres above Edinburgh in Holyrood Park. One of Scotland's most popular hikes, it rewards visitors with spectacular 360-degree views across the city, the Firth of Forth, and the surrounding countryside. Its dramatic landscape was shaped by volcanic activity over 340 million years ago.",
-  photos: [
-    "photos/arthurs-seat-01.jpg"
-  ]
-},
-  {
+
+{
   name: "Craigmillar Castle",
   coords: [55.925932, -3.141344],
-  text: "One of Scotland's best-preserved medieval castles, Craigmillar Castle dates from the late 14th century and is renowned for its remarkably intact tower house, curtain walls, and peaceful surroundings. Closely associated with Mary, Queen of Scots, who stayed here in 1566 following the birth of her son, the castle offers a fascinating glimpse into Scotland's turbulent royal history while providing panoramic views over Edinburgh and Arthur's Seat.",
-  photos: [
-    "photos/craigmillar-castle-01.jpg"
-  ]
+  text: "One of Scotland's best-preserved medieval castles, closely associated with Mary, Queen of Scots.",
+  base: "craigmillar-castle",
+  count: 1
 }
+
 ];
+
+
+// ===== AUTOMATIC PHOTO LIST =====
+
+places.forEach(place => {
+  place.photos = [];
+
+  for (let i = 1; i <= place.count; i++) {
+    const number = String(i).padStart(2, "0");
+    place.photos.push(`photos/${place.base}-${number}.jpg`);
+  }
+});
+
+
+// ===== CREATE MARKERS =====
 
 const photoIndexes = {};
 
@@ -278,10 +95,15 @@ places.forEach((place, index) => {
   photoIndexes[index] = 0;
 
   const popupContent = `
-    <b>${place.name}</b><br>
-    ${place.text}<br><br>
+    <div class="popup-title">${place.name}</div>
+    <p>${place.text}</p>
 
-    <img id="slide-${index}" src="${place.photos[0]}" class="popup-img"><br>
+    <img id="slide-${index}" 
+         src="${place.photos[0]}" 
+         class="popup-img"
+         onerror="this.style.display='none'">
+
+    <br>
 
     <button class="popup-button" onclick="prevPhoto(${index})">◀</button>
     <span id="counter-${index}">1 / ${place.photos.length}</span>
@@ -294,6 +116,9 @@ places.forEach((place, index) => {
       maxWidth: 750
     });
 });
+
+
+// ===== SLIDESHOW =====
 
 function nextPhoto(index) {
   photoIndexes[index] =
@@ -312,12 +137,13 @@ function prevPhoto(index) {
 
 function updatePhoto(index) {
   const photoIndex = photoIndexes[index];
+  const img = document.getElementById(`slide-${index}`);
+  const counter = document.getElementById(`counter-${index}`);
 
-  document.getElementById(`slide-${index}`).src =
-    places[index].photos[photoIndex];
+  img.style.display = "block";
+  img.src = places[index].photos[photoIndex];
 
-  document.getElementById(`counter-${index}`).textContent =
-    `${photoIndex + 1} / ${places[index].photos.length}`;
+  counter.textContent = `${photoIndex + 1} / ${places[index].photos.length}`;
 }
 </script>
 
