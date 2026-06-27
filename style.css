@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#map {
+  height: 100vh;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#searchBox,
+#categoryFilter {
+  padding: 7px;
+  margin: 3px;
+  font-size: 14px;
+}
+
+.popup-img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.popup-title {
+  font-size: 18px;
+  font-weight: bold;
+}
