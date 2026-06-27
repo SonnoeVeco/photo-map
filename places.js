@@ -18,5 +18,13 @@ const places = [
   { name: "Arthur's Seat", category: "Viewpoint", coords: [55.9445, -3.1619], description: "An extinct volcano rising above Edinburgh in Holyrood Park.", base: "arthurs-seat", count: 1 },
   { name: "Craigmillar Castle", category: "Castle", coords: [55.925932, -3.141344], description: "One of Scotland's best-preserved medieval castles.", base: "craigmillar-castle", count: 1 },
   { name: "Talacre Lighthouse & Wales Coast Path", category: "Coast", coords: [53.3506, -3.3118], description: "This section of the Wales Coast Path stretches from the historic city of Chester to the seaside town of Prestatyn, following the southern shore of the Dee Estuary and the North Wales coast. The route passes internationally important salt marshes, mudflats, sand dunes, nature reserves, and wide sandy beaches rich in birdlife. One of its most iconic landmarks is the Grade II-listed Talacre Lighthouse, standing on the beach overlooking Liverpool Bay", base: "talacre-lighthouse",
-  count: 15}
+  count: 15},
+  {
+  name: "Kinder Scout, Peak District",
+  category: "National Park",
+  coords: [53.3847, -1.8756],
+  description: "Kinder Scout, rising to 636 metres, is the highest point in the Peak District National Park and one of England's most iconic upland landscapes. Renowned for its dramatic gritstone edges, peat moorlands, waterfalls, and sweeping panoramic views, it is a paradise for hikers and photographers",
+  base: "kinder-scout",
+  count: 10
+}
 ];
