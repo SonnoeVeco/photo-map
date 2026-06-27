@@ -5,7 +5,26 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
-const markerCluster = L.markerClusterGroup();
+const categoryIcons = {
+  "Castle": "🏰",
+  "Town": "🏘️",
+  "National Park": "⛰️",
+  "Abbey": "⛪",
+  "Aqueduct": "🌉",
+  "Viewpoint": "🌄",
+  "Church": "⛪"
+};
+
+const iconEmoji = categoryIcons[place.category] || "📍";
+
+const customIcon = L.divIcon({
+  html: `<div class="custom-marker">${iconEmoji}</div>`,
+  className: "",
+  iconSize: [34, 34],
+  iconAnchor: [17, 17]
+});
+
+const marker = L.marker(place.coords, { icon: customIcon });
 map.addLayer(markerCluster);
 
 let lightbox;
