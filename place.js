@@ -1,0 +1,165 @@
+const places = [
+
+{
+  name: "York Minster",
+  category: "Church",
+  coords: [53.96195, -1.08197],
+  description: "An Anglican cathedral, constructed between 1220 and 1472.",
+  base: "minster",
+  count: 11
+},
+
+{
+  name: "Clifford's Tower",
+  category: "Castle",
+  coords: [53.95561, -1.08017],
+  description: "Remains of the Norman castle in York.",
+  base: "clifford",
+  count: 4
+},
+
+{
+  name: "Tenby",
+  category: "Town",
+  coords: [51.672573, -4.695816],
+  description: "A picturesque 12th-century seaside town.",
+  base: "tenby",
+  count: 10
+},
+
+{
+  name: "Caerphilly Castle",
+  category: "Castle",
+  coords: [51.5761, -3.2204],
+  description: "One of Britain's largest medieval castles, renowned for its vast water defences and iconic leaning tower.",
+  base: "caerfilly",
+  count: 6
+},
+
+{
+  name: "Flint Castle",
+  category: "Castle",
+  coords: [53.2509, -3.1322],
+  description: "The first castle built by Edward I during his conquest of Wales in 1277.",
+  base: "flint",
+  count: 10
+},
+
+{
+  name: "Gwrych Castle",
+  category: "Castle",
+  coords: [53.283262, -3.608089],
+  description: "A striking 19th-century Gothic Revival castle overlooking the Irish Sea.",
+  base: "gwrych",
+  count: 4
+},
+
+{
+  name: "Llangollen",
+  category: "Town",
+  coords: [52.9692, -3.1718],
+  description: "A picturesque market town nestled in the Dee Valley.",
+  base: "llangollen",
+  count: 9
+},
+
+{
+  name: "Snowdon (Yr Wyddfa), Eryri National Park",
+  category: "National Park",
+  coords: [53.0685, -4.0761],
+  description: "The highest mountain in Wales and the iconic peak of Eryri National Park.",
+  base: "snowdon",
+  count: 7
+},
+
+{
+  name: "Beeston Castle",
+  category: "Castle",
+  coords: [53.1298, -2.6892],
+  description: "A dramatic 13th-century royal fortress overlooking the Cheshire Plain.",
+  base: "beeston-castle",
+  count: 3
+},
+
+{
+  name: "Stokesay Castle",
+  category: "Castle",
+  coords: [52.4187, -2.8345],
+  description: "One of England's finest fortified manor houses.",
+  base: "stokesay-castle",
+  count: 5
+},
+
+{
+  name: "Ludlow Castle",
+  category: "Castle",
+  coords: [52.3662, -2.7188],
+  description: "One of England's most important Norman fortresses.",
+  base: "ludlow-castle",
+  count: 8
+},
+
+{
+  name: "Valle Crucis Abbey",
+  category: "Abbey",
+  coords: [52.9785, -3.1845],
+  description: "One of Wales' best-preserved Cistercian monasteries.",
+  base: "valle-crucis-abbey",
+  count: 4
+},
+
+{
+  name: "Pontcysyllte Aqueduct",
+  category: "Aqueduct",
+  coords: [52.9708, -3.0878],
+  description: "A UNESCO World Heritage Site carrying the Llangollen Canal above the River Dee.",
+  base: "pontcysyllte-aqueduct",
+  count: 5
+},
+
+{
+  name: "Tantallon Castle",
+  category: "Castle",
+  coords: [56.056661, -2.650164],
+  description: "A dramatic coastal fortress overlooking the North Sea.",
+  base: "tantallon-castle",
+  count: 7
+},
+
+{
+  name: "Edinburgh Castle",
+  category: "Castle",
+  coords: [55.9486, -3.1999],
+  description: "Scotland's most iconic fortress, dominating the city from Castle Rock.",
+  base: "edinburgh-castle",
+  count: 1
+},
+
+{
+  name: "Calton Hill",
+  category: "Viewpoint",
+  coords: [55.9559, -3.1825],
+  description: "One of Edinburgh's most famous viewpoints.",
+  base: "calton-hill",
+  count: 1
+},
+
+{
+  name: "Arthur's Seat",
+  category: "Viewpoint",
+  coords: [55.9445, -3.1619],
+  description: "An extinct volcano rising above Edinburgh in Holyrood Park.",
+  base: "arthurs-seat",
+  count: 1
+},
+
+{
+  name: "Craigmillar Castle",
+  category: "Castle",
+  coords: [55.925932, -3.141344],
+  description: "One of Scotland's best-preserved medieval castles.",
+  base: "craigmillar-castle",
+  count: 1
+}
+
+];
