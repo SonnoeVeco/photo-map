@@ -1,151 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Photo Map</title>
+  <meta charset="utf-8">
+  <title>Photo Map</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-#map {
-  height: 100vh;
-}
-
-.popup-img {
-  width: 650px;
-  max-width: 90vw;
-  max-height: 70vh;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.popup-button {
-  font-size: 22px;
-  padding: 6px 14px;
-  margin: 6px;
-}
-
-.popup-title {
-  font-size: 18px;
-  font-weight: bold;
-}
-</style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div id="controls">
+  <input id="searchBox" type="text" placeholder="Search place...">
+
+  <select id="categoryFilter">
+    <option value="All">All categories</option>
+    <option value="Castle">Castles</option>
+    <option value="Town">Towns</option>
+    <option value="National Park">National Parks</option>
+    <option value="Abbey">Abbeys</option>
+    <option value="Aqueduct">Aqueducts</option>
+    <option value="Viewpoint">Viewpoints</option>
+  </select>
+</div>
+
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<script>
-const map = L.map('map').setView([54, -2], 5);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© OpenStreetMap'
-}).addTo(map);
-
-
-// ===== LOCATIONS =====
-
-const places = [
-
-{
-  name: "Ludlow Castle",
-  coords: [52.3662, -2.7188],
-  text: "Overlooking the River Teme, Ludlow Castle is one of England's most important Norman fortresses. Its impressive ruins dominate the historic market town of Ludlow.",
-  base: "ludlow-castle",
-  count: 8
-},
-
-{
-  name: "Craigmillar Castle",
-  coords: [55.925932, -3.141344],
-  text: "One of Scotland's best-preserved medieval castles, closely associated with Mary, Queen of Scots.",
-  base: "craigmillar-castle",
-  count: 1
-}
-
-];
-
-
-// ===== AUTOMATIC PHOTO LIST =====
-
-places.forEach(place => {
-  place.photos = [];
-
-  for (let i = 1; i <= place.count; i++) {
-    const number = String(i).padStart(2, "0");
-    place.photos.push(`photos/${place.base}-${number}.jpg`);
-  }
-});
-
-
-// ===== CREATE MARKERS =====
-
-const photoIndexes = {};
-
-places.forEach((place, index) => {
-  photoIndexes[index] = 0;
-
-  const popupContent = `
-    <div class="popup-title">${place.name}</div>
-    <p>${place.text}</p>
-
-    <img id="slide-${index}" 
-         src="${place.photos[0]}" 
-         class="popup-img"
-         onerror="this.style.display='none'">
-
-    <br>
-
-    <button class="popup-button" onclick="prevPhoto(${index})">◀</button>
-    <span id="counter-${index}">1 / ${place.photos.length}</span>
-    <button class="popup-button" onclick="nextPhoto(${index})">▶</button>
-  `;
-
-  L.marker(place.coords)
-    .addTo(map)
-    .bindPopup(popupContent, {
-      maxWidth: 750
-    });
-});
-
-
-// ===== SLIDESHOW =====
-
-function nextPhoto(index) {
-  photoIndexes[index] =
-    (photoIndexes[index] + 1) % places[index].photos.length;
-
-  updatePhoto(index);
-}
-
-function prevPhoto(index) {
-  photoIndexes[index] =
-    (photoIndexes[index] - 1 + places[index].photos.length) %
-    places[index].photos.length;
-
-  updatePhoto(index);
-}
-
-function updatePhoto(index) {
-  const photoIndex = photoIndexes[index];
-  const img = document.getElementById(`slide-${index}`);
-  const counter = document.getElementById(`counter-${index}`);
-
-  img.style.display = "block";
-  img.src = places[index].photos[photoIndex];
-
-  counter.textContent = `${photoIndex + 1} / ${places[index].photos.length}`;
-}
-</script>
+<script src="places.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
