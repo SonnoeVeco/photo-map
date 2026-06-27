@@ -1,9 +1,14 @@
-const map = L.map('map').setView([54, -2], 5);
+const map = L.map("map").setView([54, -2], 5);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  attribution: '© OpenStreetMap'
+  attribution: "© OpenStreetMap"
 }).addTo(map);
+
+const markerCluster = L.markerClusterGroup();
+map.addLayer(markerCluster);
+
+let lightbox;
 
 const categoryIcons = {
   "Castle": "🏰",
@@ -15,30 +20,25 @@ const categoryIcons = {
   "Church": "⛪"
 };
 
-const iconEmoji = categoryIcons[place.category] || "📍";
-
-const customIcon = L.divIcon({
-  html: `<div class="custom-marker">${iconEmoji}</div>`,
-  className: "",
-  iconSize: [34, 34],
-  iconAnchor: [17, 17]
-});
-
-const marker = L.marker(place.coords, { icon: customIcon });
-map.addLayer(markerCluster);
-
-let lightbox;
-
-
-// create photo list automatically
 places.forEach(place => {
   place.photos = [];
 
   for (let i = 1; i <= place.count; i++) {
-    place.photos.push(`photos/${place.base}-${i}.jpg`);
+    const number = String(i).padStart(2, "0");
+    place.photos.push(`photos/${place.base}-${number}.jpg`);
   }
 });
 
+function createIcon(category) {
+  const iconEmoji = categoryIcons[category] || "📍";
+
+  return L.divIcon({
+    html: `<div class="custom-marker">${iconEmoji}</div>`,
+    className: "custom-div-icon",
+    iconSize: [34, 34],
+    iconAnchor: [17, 17]
+  });
+}
 
 function createPopup(place, index) {
   let gallery = "";
@@ -46,7 +46,7 @@ function createPopup(place, index) {
   place.photos.forEach((photo, i) => {
     gallery += `
       <a href="${photo}"
-         class="glightbox gallery-${index}"
+         class="glightbox"
          data-gallery="gallery-${index}"
          data-title="${place.name}"
          data-description="${place.description}">
@@ -65,12 +65,16 @@ function createPopup(place, index) {
   `;
 }
 
-
 function renderMarkers() {
   markerCluster.clearLayers();
 
-  const searchText = document.getElementById("searchBox").value.toLowerCase();
-  const selectedCategory = document.getElementById("categoryFilter").value;
+  const searchText = document
+    .getElementById("searchBox")
+    .value
+    .toLowerCase();
+
+  const selectedCategory =
+    document.getElementById("categoryFilter").value;
 
   places.forEach((place, index) => {
     const matchesSearch =
@@ -78,11 +82,18 @@ function renderMarkers() {
       place.description.toLowerCase().includes(searchText);
 
     const matchesCategory =
-      selectedCategory === "All" || place.category === selectedCategory;
+      selectedCategory === "All" ||
+      place.category === selectedCategory;
 
     if (matchesSearch && matchesCategory) {
-      const marker = L.marker(place.coords);
-      marker.bindPopup(createPopup(place, index), { maxWidth: 380 });
+      const marker = L.marker(place.coords, {
+        icon: createIcon(place.category)
+      });
+
+      marker.bindPopup(createPopup(place, index), {
+        maxWidth: 380
+      });
+
       markerCluster.addLayer(marker);
     }
   });
@@ -99,11 +110,15 @@ function renderMarkers() {
   });
 }
 
+document
+  .getElementById("searchBox")
+  .addEventListener("input", renderMarkers);
 
-document.getElementById("searchBox").addEventListener("input", renderMarkers);
-document.getElementById("categoryFilter").addEventListener("change", renderMarkers);
+document
+  .getElementById("categoryFilter")
+  .addEventListener("change", renderMarkers);
 
-map.on("popupopen", function() {
+map.on("popupopen", function () {
   if (lightbox) {
     lightbox.reload();
   }
