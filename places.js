@@ -10,7 +10,7 @@ const places = [
   { name: "Beeston Castle", category: "Castle", coords: [53.1298, -2.6892], description: "A dramatic 13th-century royal fortress overlooking the Cheshire Plain.", base: "beeston", count: 3 },
   { name: "Stokesay Castle", category: "Castle", coords: [52.4187, -2.8345], description: "One of England's finest fortified manor houses.", base: "stokesay", count: 5 },
   { name: "Ludlow Castle", category: "Castle", coords: [52.3662, -2.7188], description: "One of England's most important Norman fortresses.", base: "ludlow-castle", count: 8 },
-  { name: "Valle Crucis Abbey", category: "Abbey", coords: [52.9785, -3.1845], description: "One of Wales' best-preserved Cistercian monasteries.", base: "valle-crucis-abbey", count: 4 },
+  { name: "Valle Crucis Abbey", category: "Abbey", coords: [52.988714, -3.186365], description: "One of Wales' best-preserved Cistercian monasteries.", base: "valle-crucis-abbey", count: 4 },
   { name: "Pontcysyllte Aqueduct", category: "Aqueduct", coords: [52.9708, -3.0878], description: "A UNESCO World Heritage Site carrying the Llangollen Canal above the River Dee.", base: "pontcysyllte-aqueduct", count: 5 },
   { name: "Tantallon Castle", category: "Castle", coords: [56.056661, -2.650164], description: "A dramatic coastal fortress overlooking the North Sea.", base: "tantallon-castle", count: 7 },
   { name: "Edinburgh Castle", category: "Castle", coords: [55.9486, -3.1999], description: "Scotland's most iconic fortress, dominating the city from Castle Rock.", base: "edinburgh-castle", count: 1 },
