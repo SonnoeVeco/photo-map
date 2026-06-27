@@ -18,5 +18,5 @@ const places = [
   { name: "Arthur's Seat", category: "Viewpoint", coords: [55.9445, -3.1619], description: "An extinct volcano rising above Edinburgh in Holyrood Park.", base: "arthurs-seat", count: 1 },
   { name: "Craigmillar Castle", category: "Castle", coords: [55.925932, -3.141344], description: "One of Scotland's best-preserved medieval castles.", base: "craigmillar-castle", count: 1 },
   { name: "Talacre Lighthouse & Wales Coast Path", category: "Coast", coords: [53.3506, -3.3118], description: "This section of the Wales Coast Path stretches from the historic city of Chester to the seaside town of Prestatyn, following the southern shore of the Dee Estuary and the North Wales coast. The route passes internationally important salt marshes, mudflats, sand dunes, nature reserves, and wide sandy beaches rich in birdlife. One of its most iconic landmarks is the Grade II-listed Talacre Lighthouse, standing on the beach overlooking Liverpool Bay", base: "talacre-lighthouse",
-  count: 10}
+  count: 15}
 ];
