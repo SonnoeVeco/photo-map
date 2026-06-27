@@ -23,10 +23,9 @@ const categoryIcons = {
 places.forEach(place => {
   place.photos = [];
 
-  for (let i = 1; i <= place.count; i++) {
-    const number = String(i).padStart(2, "0");
-    place.photos.push(`photos/${place.base}-${number}.jpg`);
-  }
+for (let i = 1; i <= place.count; i++) {
+  place.photos.push(`photos/${place.base}-${i}.jpg`);
+}
 });
 
 function createIcon(category) {
