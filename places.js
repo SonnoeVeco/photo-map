@@ -51,9 +51,9 @@ const places = [
   {
   name: "Long Mynd – Bur Way Viewpoint",
   category: "National Park",
-  coords: [52.5539, -2.8656],
+  coords: [52.542906, -2.831605],
   description: "Located in the heart of the Shropshire Hills National Landscape, Bur Way Viewpoint offers one of the finest panoramic vistas in central England. Overlooking the sweeping heather-covered plateau of the Long Mynd and the picturesque market town of Church Stretton, the viewpoint provides spectacular scenery throughout the year. The Long Mynd, shaped by ancient geological processes over 500 million years ago, is renowned for its dramatic valleys, wild moorland, and excellent hiking opportunities, making it one of Shropshire's most iconic landscapes.",
-  website: "https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/long-mynd",
+  website: "https://www.visitshropshirehills.co.uk/shropshire-hills/long-mynd-and-stiperstones",
   base: "long-mynd-bur-way",
   count: 12
 }
