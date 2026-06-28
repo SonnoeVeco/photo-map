@@ -1,10 +1,11 @@
 const places = [
   { name: "York Minster", category: "Church", coords: [53.96195, -1.08197], description: "An Anglican cathedral, constructed between 1220 and 1472.",website: "https://yorkminster.org/", base: "minster", count: 10 },
   { name: "Clifford's Tower", category: "Castle", coords: [53.95561, -1.08017], description: "Remains of the Norman castle in York.", website: "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/", base: "clifford", count: 4 },
-  { name: "Tenby", category: "Town", coords: [51.672573, -4.695816], description: "A picturesque 12th-century seaside town.", base: "tenby", count: 10 },
+  { name: "Tenby", category: "Town", coords: [51.672573, -4.695816], description: "A picturesque 12th-century seaside town.", base: "tenby", website: "https://www.visitpembrokeshire.com/explore-pembrokeshire/towns-and-villages/tenby"
+, count: 10 },
   { name: "Caerphilly Castle", category: "Castle", coords: [51.5761, -3.2204], description: "One of Britain's largest medieval castles, renowned for its vast water defences and iconic leaning tower.", base: "caerfilly", count: 6 },
-  { name: "Flint Castle", category: "Castle", coords: [53.2509, -3.1322], description: "The first castle built by Edward I during his conquest of Wales in 1277.", base: "flint", count: 10 },
-  { name: "Gwrych Castle", category: "Castle", coords: [53.283262, -3.608089], description: "A striking 19th-century Gothic Revival castle overlooking the Irish Sea.", base: "gwrych", count: 4 },
+  { name: "Flint Castle", category: "Castle", coords: [53.251790, -3.129982], description: "The first castle built by Edward I during his conquest of Wales in 1277.", base: "flint", count: 10 },
+  { name: "Gwrych Castle", category: "Castle", coords: [53.283262, -3.608089], description: "A striking 19th-century Gothic Revival castle overlooking the Irish Sea.",website: "https://gwrychcastle.co.uk/", base: "gwrych", count: 4 },
   { name: "Llangollen", category: "Town", coords: [52.9692, -3.1718], description: "A picturesque market town nestled in the Dee Valley.", base: "llangollen", count: 9 },
   { name: "Snowdon (Yr Wyddfa), Eryri National Park", category: "National Park", coords: [53.0685, -4.0761], description: "The highest mountain in Wales and the iconic peak of Eryri National Park.", base: "snowdon", count: 7 },
   { name: "Beeston Castle", category: "Castle", coords: [53.1298, -2.6892], description: "A dramatic 13th-century royal fortress overlooking the Cheshire Plain.", base: "beeston", count: 3 },
