@@ -65,5 +65,32 @@ const places = [
   website: "https://strettonparish.org.uk/st-laurences/",
   base: "st-laurences-church",
   count: 1
+},
+  {
+  name: "St Laurence's Church",
+  category: "Church",
+  coords: [51.3473, -2.2518],
+  description: "One of England's finest surviving Anglo-Saxon churches, St Laurence's Church was built in the late 10th or early 11th century and is remarkably well preserved. Hidden for centuries within later buildings before its rediscovery in 1856, the church is celebrated for its distinctive Anglo-Saxon architecture, including tall narrow windows, decorative stone carvings, and original pilaster strips. It is considered one of the most complete Saxon churches in Britain.",
+  website: "https://www.stlaurencebradfordonavon.org/",
+  base: "st-laurence-saxon-church",
+  count: 10
+},
+  {
+  name: "Bradford-on-Avon",
+  category: "Town",
+  coords: [51.3456, -2.2517],
+  description: "Nestled along the banks of the River Avon in Wiltshire, Bradford-on-Avon is one of England's best-preserved historic market towns. With origins dating back to Saxon times, it is renowned for its medieval streets, historic stone buildings, charming riverside setting, and impressive collection of architectural landmarks, including the Saxon Church of St Laurence, the medieval Tithe Barn, and the iconic 13th-century Town Bridge. The town's rich history and picturesque character make it one of the most attractive destinations in southwest England.",
+  website: "https://www.visitwiltshire.co.uk/places-to-visit/bradford-on-avon-p2428803",
+  base: "bradford-on-avon",
+  count: 10
+},
+  {
+  name: "Cabot Tower",
+  category: "Historic Architecture",
+  coords: [51.4553, -2.6114],
+  description: "Standing atop Brandon Hill, Cabot Tower is a 32-metre Victorian landmark built in 1897 to commemorate the 400th anniversary of John Cabot's voyage from Bristol to North America. Constructed from red sandstone and cream Bath stone in a distinctive Gothic Revival style, the tower offers spectacular panoramic views over Bristol, the Avon Gorge, Clifton Suspension Bridge, and the surrounding countryside. It remains one of the city's most iconic viewpoints and historic monuments.",
+  website: "https://visitbristol.co.uk/listing/cabot-tower/141277301/",
+  base: "cabot-tower",
+  count: 10
 }
 ];
