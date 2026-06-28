@@ -89,7 +89,7 @@ const places = [
   category: "Historic Architecture",
   coords: [51.453979, -2.606928],
   description: "Standing atop Brandon Hill, Cabot Tower is a 32-metre Victorian landmark built in 1897 to commemorate the 400th anniversary of John Cabot's voyage from Bristol to North America. Constructed from red sandstone and cream Bath stone in a distinctive Gothic Revival style, the tower offers spectacular panoramic views over Bristol, the Avon Gorge, Clifton Suspension Bridge, and the surrounding countryside. It remains one of the city's most iconic viewpoints and historic monuments.",
-  website: "https://visitbristol.co.uk/listing/cabot-tower/141277301/",
+  website: "https://visitbristol.co.uk/listing/cabot-tower-and-brandon-hill/2440101/",
   base: "cabot-tower",
   count: 10
 },
