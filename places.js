@@ -111,4 +111,13 @@ const places = [
   base: "holy-trinity-stratford",
   count: 10
 },
+  {
+  name: "Wales Coast Path – Prestatyn",
+  category: "Coast",
+  coords: [53.3363, -3.4079],
+  description: "Prestatyn marks the northern gateway to the Wales Coast Path, one of the world's longest continuous coastal walking trails, stretching approximately 1,400 km (870 miles) around the Welsh coastline. This scenic section follows rugged limestone cliffs, sandy beaches, and coastal grasslands, offering spectacular views across Liverpool Bay and the Irish Sea. The trail is popular with walkers, cyclists, birdwatchers, and photographers, providing easy access to the nearby Clwydian Range National Landscape and some of North Wales' most beautiful coastal scenery.",
+  website: "https://www.walescoastpath.gov.uk/",
+  base: "prestatyn-coast-path",
+  count: 10
+}
 ];
