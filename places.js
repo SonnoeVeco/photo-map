@@ -44,7 +44,7 @@ const places = [
   category: "Historic Architecture",
   coords: [51.3862, -2.3658],
   description: "One of Britain's finest examples of Georgian architecture, the Royal Crescent was designed by John Wood the Younger and built between 1767 and 1775. This magnificent sweeping terrace of 30 townhouses overlooks Royal Victoria Park and forms part of the UNESCO World Heritage City of Bath. Renowned for its elegant honey-coloured Bath stone façade, it has become one of England's most iconic architectural landmarks and has featured in numerous films and television productions.",
-  website: "https://www.royalcrescent.co.uk/",
+  website: "https://www.visitbath.co.uk/things-to-do/the-royal-crescent-p56191",
   base: "royal-crescent",
   count: 1
 },
