@@ -146,5 +146,5 @@ const places = [
   website: "https://www.visitmanchester.com/listing/castlefield/97101/",
   base: "castlefield",
   count: 1
-},
+}
 ];
