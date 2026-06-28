@@ -60,20 +60,20 @@ const places = [
   {
   name: "St Laurence's Church",
   category: "Church",
-  coords: [52.5375, -2.8033],
+  coords: [52.5382177713211, -2.8087791493998644],
   description: "Standing in the heart of Church Stretton beneath the Long Mynd, St Laurence's Church is a historic parish church with origins dating back to the 13th century. Renowned for its striking sandstone tower, beautiful stained-glass windows, and peaceful churchyard, it has served the local community for centuries",
   website: "https://strettonparish.org.uk/st-laurences/",
   base: "st-laurences-church",
   count: 1
 },
   {
-  name: "St Laurence's Church",
+  name: "St Laurence's Church (Saxon Church)",
   category: "Church",
-  coords: [51.3473, -2.2518],
+  coords: [51.34704924157919, -2.253805915755273],
   description: "One of England's finest surviving Anglo-Saxon churches, St Laurence's Church was built in the late 10th or early 11th century and is remarkably well preserved. Hidden for centuries within later buildings before its rediscovery in 1856, the church is celebrated for its distinctive Anglo-Saxon architecture, including tall narrow windows, decorative stone carvings, and original pilaster strips. It is considered one of the most complete Saxon churches in Britain.",
   website: "https://www.stlaurencebradfordonavon.org/",
   base: "st-laurence-saxon-church",
-  count: 10
+  count: 1
 },
   {
   name: "Bradford-on-Avon",
@@ -87,7 +87,7 @@ const places = [
   {
   name: "Cabot Tower",
   category: "Historic Architecture",
-  coords: [51.4553, -2.6114],
+  coords: [51.453979, -2.606928],
   description: "Standing atop Brandon Hill, Cabot Tower is a 32-metre Victorian landmark built in 1897 to commemorate the 400th anniversary of John Cabot's voyage from Bristol to North America. Constructed from red sandstone and cream Bath stone in a distinctive Gothic Revival style, the tower offers spectacular panoramic views over Bristol, the Avon Gorge, Clifton Suspension Bridge, and the surrounding countryside. It remains one of the city's most iconic viewpoints and historic monuments.",
   website: "https://visitbristol.co.uk/listing/cabot-tower/141277301/",
   base: "cabot-tower",
@@ -101,5 +101,14 @@ const places = [
   website: "https://cadw.gov.wales/visit/places-to-visit/conwy-castle",
   base: "conwy-castle",
   count: 10
-}
+},
+  {
+  name: "Holy Trinity Church",
+  category: "Church",
+  coords: [52.1883, -1.7046],
+  description: "Set on the banks of the River Avon, Holy Trinity Church is one of England's most significant parish churches. Dating largely from the 13th century, it is internationally renowned as the baptismal and burial place of William Shakespeare, whose grave lies within the chancel. The church features magnificent medieval architecture, beautiful stained-glass windows, and a peaceful riverside setting, attracting visitors from around the world.",
+  website: "https://en.wikipedia.org/wiki/Holy_Trinity_Church,_Bradford-on-Avon",
+  base: "holy-trinity-stratford",
+  count: 10
+},
 ];
