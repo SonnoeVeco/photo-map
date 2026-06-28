@@ -1,7 +1,7 @@
 const places = [
   { name: "York Minster", category: "Church", coords: [53.96195, -1.08197], description: "An Anglican cathedral, constructed between 1220 and 1472.",website: "https://yorkminster.org/", base: "minster", count: 10 },
   { name: "Clifford's Tower", category: "Castle", coords: [53.95561, -1.08017], description: "Remains of the Norman castle in York.", website: "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/", base: "clifford", count: 4 },
-  { name: "Tenby", category: "Town", coords: [51.672573, -4.695816], description: "A picturesque 12th-century seaside town.", base: "tenby", website: "https://www.visitpembrokeshire.com/explore-pembrokeshire/towns-and-villages/tenby"
+  { name: "Tenby", category: "Town", coords: [51.672573, -4.695816], description: "A picturesque 12th-century seaside town.", base: "tenby", website: "https://www.visitwales.com/destinations/west-wales/pembrokeshire/things-do-tenby"
 , count: 10 },
   { name: "Caerphilly Castle", category: "Castle", coords: [51.5761, -3.2204], description: "One of Britain's largest medieval castles, renowned for its vast water defences and iconic leaning tower.",website: "https://cadw.gov.wales/visit/places-to-visit/caerphilly-castle", base: "caerfilly", count: 6 },
   { name: "Flint Castle", category: "Castle", coords: [53.251790, -3.129982], description: "The first castle built by Edward I during his conquest of Wales in 1277.",website: "https://cadw.gov.wales/visit/places-to-visit/flint-castle", base: "flint", count: 10 },
