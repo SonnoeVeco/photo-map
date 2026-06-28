@@ -55,10 +55,22 @@ function createPopup(place, index) {
       </a>`;
   });
   galleryHtml += `</div>`;
+  const websiteLink = place.website
+    ? `
+      <p>
+        🌐 <a href="${place.website}"
+              target="_blank"
+              rel="noopener noreferrer">
+          More information
+        </a>
+      </p>
+      `
+    : "";
   return `
     <div class="popup-title">${place.name}</div>
     <span class="popup-category">${place.category}</span>
     <p class="popup-description">${place.description}</p>
+    ${websiteLink}
     ${galleryHtml}
     <span class="popup-help">Click photo to open fullscreen gallery</span>`;
 }
