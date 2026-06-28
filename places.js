@@ -38,5 +38,23 @@ const places = [
   description: "One of the world's leading conservation zoos and the UK's most visited wildlife attraction, Chester Zoo is home to more than 37,000 animals representing over 500 species. Renowned for its immersive habitats and pioneering conservation programmes, the zoo plays a vital role in protecting endangered wildlife through international breeding, research, habitat restoration, and education projects.",
   base: "chester-zoo",
   website: "https://www.chesterzoo.org/",
-  count: 5}
+  count: 5},
+  {
+  name: "The Royal Crescent",
+  category: "Historic Architecture",
+  coords: [51.3862, -2.3658],
+  description: "One of Britain's finest examples of Georgian architecture, the Royal Crescent was designed by John Wood the Younger and built between 1767 and 1775. This magnificent sweeping terrace of 30 townhouses overlooks Royal Victoria Park and forms part of the UNESCO World Heritage City of Bath. Renowned for its elegant honey-coloured Bath stone façade, it has become one of England's most iconic architectural landmarks and has featured in numerous films and television productions.",
+  website: "https://www.royalcrescent.co.uk/",
+  base: "royal-crescent",
+  count: 1
+},
+  {
+  name: "Long Mynd – Bur Way Viewpoint",
+  category: "National Park",
+  coords: [52.5539, -2.8656],
+  description: "Located in the heart of the Shropshire Hills National Landscape, Bur Way Viewpoint offers one of the finest panoramic vistas in central England. Overlooking the sweeping heather-covered plateau of the Long Mynd and the picturesque market town of Church Stretton, the viewpoint provides spectacular scenery throughout the year. The Long Mynd, shaped by ancient geological processes over 500 million years ago, is renowned for its dramatic valleys, wild moorland, and excellent hiking opportunities, making it one of Shropshire's most iconic landscapes.",
+  website: "https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/long-mynd",
+  base: "long-mynd-bur-way",
+  count: 12
+}
 ];
