@@ -61,8 +61,8 @@ const places = [
   name: "St Laurence's Church",
   category: "Church",
   coords: [52.5375, -2.8033],
-  description: "Standing in the heart of Church Stretton beneath the Long Mynd, St Laurence's Church is a historic parish church with origins dating back to the 12th century. Renowned for its striking sandstone tower, beautiful stained-glass windows, and peaceful churchyard, it has served the local community for centuries",
-  website: "https://stlaurenceschurchstretton.org.uk/",
+  description: "Standing in the heart of Church Stretton beneath the Long Mynd, St Laurence's Church is a historic parish church with origins dating back to the 13th century. Renowned for its striking sandstone tower, beautiful stained-glass windows, and peaceful churchyard, it has served the local community for centuries",
+  website: "https://strettonparish.org.uk/st-laurences/",
   base: "st-laurences-church",
   count: 1
 }
