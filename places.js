@@ -150,7 +150,7 @@ const places = [
   {
   name: "Earl's Hill",
   category: "National Landscape",
-  coords: [52.7188, -2.9045],
+  coords: [52.637993390898494, -2.8741504331075944],
   description: "Earl's Hill is a prominent sandstone hill in the Shropshire Hills National Landscape, offering panoramic views across the Shropshire countryside, the Stiperstones, and the Welsh borderlands. Designated as a National Nature Reserve, it is renowned for its heathland, ancient woodlands, and rich wildlife, including rare plants, butterflies, and birds. The hill is a popular destination for walking, nature photography, and enjoying some of the finest scenery in central England.",
   website: "https://www.shropshirewildlifetrust.org.uk/nature-reserves/earls-and-pontesford-hill",
   base: "earls-hill",
