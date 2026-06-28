@@ -106,7 +106,7 @@ const places = [
   name: "Holy Trinity Church",
   category: "Church",
   coords: [51.346690115723845, -2.2539352087631572],
-  description: "Set on the banks of the River Avon, Holy Trinity Church is one of England's most significant parish churches. Dating largely from the 13th century, it is internationally renowned as the baptismal and burial place of William Shakespeare, whose grave lies within the chancel. The church features magnificent medieval architecture, beautiful stained-glass windows, and a peaceful riverside setting, attracting visitors from around the world.",
+  description: "A well-preserved 12th-century Norman church.",
   website: "https://en.wikipedia.org/wiki/Holy_Trinity_Church,_Bradford-on-Avon",
   base: "holy-trinity-stratford",
   count: 10
@@ -115,7 +115,7 @@ const places = [
   name: "Wales Coast Path – Prestatyn",
   category: "Coast",
   coords: [53.34328816971176, -3.4098401338756656],
-  description: "",
+  description: "A north part of Weales Coast Path",
   website: "https://www.walescoastpath.gov.uk/",
   base: "prestatyn-coast-path",
   count: 10
