@@ -21,5 +21,19 @@ const places = [
   count: 15},
   { name: "Kinder Scout, Peak District", category: "National Park", coords: [53.3847, -1.8756], description: "Kinder Scout, rising to 636 metres, is the highest point in the Peak District National Park and one of England's most iconic upland landscapes. Renowned for its dramatic gritstone edges, peat moorlands, waterfalls, and sweeping panoramic views, it is a paradise for hikers and photographers", base: "kinder-scout", count: 23},
   { name: "Shrewsbury", category: "Town", coords: [52.7073, -2.7553], description: "One of England's finest medieval market towns, Shrewsbury is almost entirely encircled by a loop of the River Severn. Renowned for its beautifully preserved timber-framed buildings, narrow historic streets, the town is also the birthplace of Charles Darwin", base: "shrewsberry",
-  count: 6}
+  count: 6},
+  {
+  name: "Trentham Monkey Forest",
+  category: "Zoo",
+  coords: [52.9918, -2.2069],
+  description: "Home to the UK's only free-roaming population of Barbary macaques, Trentham Monkey Forest offers a unique opportunity to observe these endangered primates living in a 60-acre ancient woodland. Visitors can walk among over 140 monkeys as they interact naturally, making it one of the country's most distinctive wildlife attractions while supporting international conservation and research programmes.",
+  base: "trentham-monkey-forest",
+  count: 11},
+  {
+  name: "Chester Zoo",
+  category: "Wildlife",
+  coords: [53.2266, -2.8848],
+  description: "One of the world's leading conservation zoos and the UK's most visited wildlife attraction, Chester Zoo is home to more than 37,000 animals representing over 500 species. Renowned for its immersive habitats and pioneering conservation programmes, the zoo plays a vital role in protecting endangered wildlife through international breeding, research, habitat restoration, and education projects.",
+  base: "chester-zoo",
+  count: 5}
 ];
