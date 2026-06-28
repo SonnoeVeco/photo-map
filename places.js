@@ -96,7 +96,7 @@ const places = [
   {
   name: "Conwy Castle",
   category: "Castle",
-  coords: [53.2808, -3.8276],
+  coords: [53.28003399211935, -3.8260067313219817],
   description: "A masterpiece of medieval military architecture, Conwy Castle was built between 1283 and 1289 by King Edward I during his conquest of Wales. Designed by the renowned architect James of Saint George, the fortress is renowned for its eight massive towers, remarkably preserved curtain walls, and spectacular setting overlooking the Conwy Estuary. Together with the town walls, it forms part of the UNESCO World Heritage Site 'Castles and Town Walls of King Edward in Gwynedd' and is considered one of the finest examples of late 13th-century military architecture in Europe.",
   website: "https://cadw.gov.wales/visit/places-to-visit/conwy-castle",
   base: "conwy-castle",
@@ -105,7 +105,7 @@ const places = [
   {
   name: "Holy Trinity Church",
   category: "Church",
-  coords: [52.1883, -1.7046],
+  coords: [51.346690115723845, -2.2539352087631572],
   description: "Set on the banks of the River Avon, Holy Trinity Church is one of England's most significant parish churches. Dating largely from the 13th century, it is internationally renowned as the baptismal and burial place of William Shakespeare, whose grave lies within the chancel. The church features magnificent medieval architecture, beautiful stained-glass windows, and a peaceful riverside setting, attracting visitors from around the world.",
   website: "https://en.wikipedia.org/wiki/Holy_Trinity_Church,_Bradford-on-Avon",
   base: "holy-trinity-stratford",
