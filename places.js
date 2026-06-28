@@ -31,7 +31,7 @@ const places = [
   count: 11},
   {
   name: "Chester Zoo",
-  category: "Wildlife",
+  category: "Zoo",
   coords: [53.2266, -2.8848],
   description: "One of the world's leading conservation zoos and the UK's most visited wildlife attraction, Chester Zoo is home to more than 37,000 animals representing over 500 species. Renowned for its immersive habitats and pioneering conservation programmes, the zoo plays a vital role in protecting endangered wildlife through international breeding, research, habitat restoration, and education projects.",
   base: "chester-zoo",
