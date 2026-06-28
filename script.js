@@ -18,7 +18,9 @@ const categoryIcons = {
   "Aqueduct": "🌉",
   "Viewpoint": "🌄",
   "Church": "⛪",
-  "Coast": "🌊"
+  "Coast": "🌊",
+  "Wildlife": "🦋",
+  "Zoo": "🦁"
 };
 
 let lightbox = null;
