@@ -115,7 +115,7 @@ const places = [
   name: "Wales Coast Path – Prestatyn",
   category: "Coast",
   coords: [53.34328816971176, -3.4098401338756656],
-  description: "A north part of Weales Coast Path",
+  description: "The northern section of the Wales Coast Path",
   website: "https://www.walescoastpath.gov.uk/",
   base: "prestatyn-coast-path",
   count: 10
