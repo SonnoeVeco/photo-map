@@ -137,5 +137,14 @@ const places = [
   website: "https://portsunlightvillage.com/",
   base: "port-sunlight",
   count: 10
-}
+},
+  {
+  name: "Castlefield",
+  category: "Historic Architecture",
+  coords: [53.473940217273395, -2.253159632457775],
+  description: "The historic heart of Manchester, Castlefield is the site of the Roman fort of Mamucium, founded around AD 79, from which the city takes its name. Today, it is renowned for its beautifully restored canals, Victorian warehouses, impressive railway viaducts, and Britain's first industrial canal, the Bridgewater Canal. Designated as the UK's first Urban Heritage Park, Castlefield offers a fascinating blend of Roman history, industrial heritage, and vibrant waterfront scenery.",
+  website: "https://www.visitmanchester.com/listing/castlefield/97101/",
+  base: "castlefield",
+  count: 1
+},
 ];
