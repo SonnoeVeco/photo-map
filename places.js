@@ -25,7 +25,7 @@ const places = [
   {
   name: "Trentham Monkey Forest",
   category: "Zoo",
-  coords: [52.9918, -2.2069],
+  coords: [52.95027249704286, -2.198193644391691],
   description: "Home to the UK's only free-roaming population of Barbary macaques, Trentham Monkey Forest offers a unique opportunity to observe these endangered primates living in a 60-acre ancient woodland. Visitors can walk among over 140 monkeys as they interact naturally, making it one of the country's most distinctive wildlife attractions while supporting international conservation and research programmes.",
   base: "trentham-monkey-forest",
   count: 11},
