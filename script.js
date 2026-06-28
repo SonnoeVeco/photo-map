@@ -20,7 +20,8 @@ const categoryIcons = {
   "Church": "⛪",
   "Coast": "🌊",
   "Wildlife": "🦋",
-  "Zoo": "🦁"
+  "Zoo": "🦁",
+  "Historic Architecture": "🏛️"
 };
 
 let lightbox = null;
