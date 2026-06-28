@@ -128,5 +128,14 @@ const places = [
   website: "https://www.parliament.uk/bigben",
   base: "big-ben",
   count: 1
+},
+  {
+  name: "Port Sunlight",
+  category: "Town",
+  coords: [53.3496, -2.9947],
+  description: "Founded in 1888 by soap manufacturer William Hesketh Lever (later Lord Leverhulme), Port Sunlight is one of the world's finest surviving model villages. Designed to provide high-quality housing and green spaces for workers at the nearby Lever Brothers soap factory, the village is renowned for its distinctive Arts and Crafts architecture, beautiful gardens, and more than 900 Grade II listed buildings. Today, it is home to the acclaimed Lady Lever Art Gallery and remains an outstanding example of Victorian urban planning and social reform.",
+  website: "https://portsunlightvillage.com/",
+  base: "port-sunlight",
+  count: 10
 }
 ];
