@@ -119,5 +119,14 @@ const places = [
   website: "https://www.walescoastpath.gov.uk/",
   base: "prestatyn-coast-path",
   count: 10
+},
+  {
+  name: "Big Ben (Elizabeth Tower)",
+  category: "Historic Architecture",
+  coords: [51.5008027501677, -0.12463514571886651],
+  description: "One of the world's most recognisable landmarks, Elizabeth Tower is the iconic clock tower of the Palace of Westminster and home to the Great Bell, popularly known as 'Big Ben'. Completed in 1859 and designed in the Gothic Revival style by Augustus Pugin and Charles Barry, the tower has become a symbol of London and the United Kingdom. Following an extensive conservation project completed in 2022, it continues to dominate the London skyline overlooking the River Thames.",
+  website: "https://www.parliament.uk/bigben",
+  base: "big-ben",
+  count: 1
 }
 ];
