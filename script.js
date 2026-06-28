@@ -21,7 +21,8 @@ const categoryIcons = {
   "Coast": "🌊",
   "Wildlife": "🦋",
   "Zoo": "🦁",
-  "Historic Architecture": "🏛️"
+  "Historic Architecture": "🏛️",
+  "National Landscape": "🌿"
 };
 
 let lightbox = null;
